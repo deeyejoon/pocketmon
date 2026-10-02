@@ -1,4 +1,4 @@
-Pokémon OOP Battle Simulator
+# Pokémon OOP Battle Simulator
 
 A small Pokémon-inspired battle simulator I built to practice **object-oriented programming and design**.
 
