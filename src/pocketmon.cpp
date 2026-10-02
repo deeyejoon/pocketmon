@@ -1,5 +1,8 @@
 #include "pocketmon.hpp"
 #include <iostream>
+using std::cin;
+using std::cout;
+using std::endl;
 
 // NOTE: Charmander:
 Charmander::Charmander() {

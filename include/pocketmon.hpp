@@ -1,11 +1,10 @@
 #pragma once
 #include <string>
-using namespace std;
 
 class Pokemon {
 protected:
-  string name;
-  string type;
+  std::string name;
+  std::string type;
 
 public:
   virtual void returnType() = 0;

@@ -2,13 +2,13 @@
 #include <iostream>
 
 int main() {
-  string starter = "";
-  string func = "";
+  std::string starter = "";
+  std::string func = "";
   Pokemon *chosen = nullptr;
-  cout << "Choose your starter pokemon!" << endl;
-  cout << "(Charmander)|(Squirtle)|(Bulbasaur): ";
+  std::cout << "Choose your starter pokemon!" << std::endl;
+  std::cout << "(Charmander)|(Squirtle)|(Bulbasaur): ";
   while (starter != "Quit") {
-    cin >> starter;
+    std::cin >> starter;
     if (starter == "Charmander") {
       chosen = new Charmander();
       break;
@@ -19,14 +19,14 @@ int main() {
       chosen = new Bulbasaur();
       break;
     } else {
-      cout << "Please choose a Pokemon as shown: ";
+      std::cout << "Please choose a Pokemon as shown: ";
       continue;
     }
   }
   while (func != "Quit") {
-    cout << "Do you want to attack (Attack), check type (Type), or quit "
-            "(Quit)? ";
-    cin >> func;
+    std::cout << "Do you want to attack (Attack), check type (Type), or quit "
+                 "(Quit)? ";
+    std::cin >> func;
     if (func == "Attack") {
       chosen->Attack();
     } else if (func == "Type") {
@@ -34,7 +34,7 @@ int main() {
     } else if (func == "Quit") {
       return 0;
     } else {
-      cout << "Please pick an option as shown: ";
+      std::cout << "Please pick an option as shown: ";
       continue;
     }
   }
