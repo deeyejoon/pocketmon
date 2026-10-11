@@ -1,4 +1,4 @@
-#include "pocketmon.hpp"
+#include "../include/pocketmon.hpp"
 #include <iostream>
 
 int main() {

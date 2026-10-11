@@ -1,43 +1,67 @@
-#include "pocketmon.hpp"
-#include <iostream>
-using std::cin;
-using std::cout;
-using std::endl;
+#include "../include/pocketmon.hpp"
 
+std::string Pokemon::returnType() {
+  return type.typeName;
+}
+
+std::string Pokemon::action(int choice) {
+  return moves[choice].moveName;
+}
+
+Pokemon::Pokemon(std::string name, std::string typeName, std::string moveOne) {
+  // Pokemon name initialize
+  this->name = name;
+
+  // Pokemon type name initialize
+  type.typeName = typeName;
+}
+
+// TODO: add function in order for user to add moves/attacks AFTER pokemon is
+// created
+//  the function will take a moveName, moveType, and damage (assume zero damage
+//  means it's not an attack, e.g. support move, etc.)
+
+/*
 // NOTE: Charmander:
+
 Charmander::Charmander() {
-  cout << endl << "You caught Charmander!" << endl;
-  cout << "What will you name your Charmander? ";
-  cin >> name;
+  std::cout << std::endl << "You caught Charmander!" << std::endl;
+  std::cout << "What will you name your Charmander? ";
+  std::cin >> name;
   type = "Fire";
 }
 void Charmander::Attack() {
-  cout << name << " uses Flamethrower!" << endl << endl;
+  std::cout << name << " uses Flamethrower!" << std::endl << std::endl;
 }
 void Charmander::returnType() {
-  cout << name << "'s type is " << type << "!" << endl << endl;
+  std::cout << name << "'s type is " << type << "!" << std::endl << std::endl;
 }
 
 // NOTE: Squirtle:
 Squirtle::Squirtle() {
-  cout << endl << "You caught Squirtle!" << endl;
-  cout << "What will you name your Squirtle? ";
-  cin >> name;
+  std::cout << std::endl << "You caught Squirtle!" << std::endl;
+  std::cout << "What will you name your Squirtle? ";
+  std::cin >> name;
   type = "Water";
 }
-void Squirtle::Attack() { cout << name << " uses Water Gun!" << endl << endl; }
+void Squirtle::Attack() {
+  std::cout << name << " uses Water Gun!" << std::endl << std::endl;
+}
 void Squirtle::returnType() {
-  cout << name << "'s type is " << type << "!" << endl << endl;
+  std::cout << name << "'s type is " << type << "!" << std::endl << std::endl;
 }
 
 // NOTE: Bulbasaur:
 Bulbasaur::Bulbasaur() {
-  cout << endl << "You caught Bulbasaur!" << endl;
-  cout << "What will you name your Bulbasaur? ";
-  cin >> name;
+  std::cout << std::endl << "You caught Bulbasaur!" << std::endl;
+  std::cout << "What will you name your Bulbasaur? ";
+  std::cin >> name;
   type = "Grass";
 }
-void Bulbasaur::Attack() { cout << name << " uses Water Gun!" << endl << endl; }
-void Bulbasaur::returnType() {
-  cout << name << "'s type is " << type << "!" << endl << endl;
+void Bulbasaur::Attack() {
+  std::cout << name << " uses Water Gun!" << std::endl << std::endl;
 }
+void Bulbasaur::returnType() {
+  std::cout << name << "'s type is " << type << "!" << std::endl << std::endl;
+}
+*/

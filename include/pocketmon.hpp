@@ -1,17 +1,34 @@
 #pragma once
 #include <string>
+#include <vector>
+
+class Type {
+public:
+  std::string typeName;
+  // NOTE:: Add type weaknesses and strengths later
+  //  regular effective, super effective, not effective, no effect
+};
+
+class Move {
+public:
+  std::string moveName;
+  int damage;
+  Type moveType;
+};
 
 class Pokemon {
-protected:
-  std::string name;
-  std::string type;
-
 public:
-  virtual void returnType() = 0;
-  virtual void Attack() = 0;
+  std::string name;
+  Type type;
+  std::vector<Move> moves;
+
+  Pokemon(std::string name, std::string typeName, std::string moveOne);
+  std::string returnType();
+  std::string action(int choice);
   virtual ~Pokemon() = default;
 };
 
+/*
 class Charmander : public Pokemon {
 public:
   Charmander();
@@ -32,3 +49,4 @@ public:
   void Attack() override;
   void returnType() override;
 };
+*/
