@@ -1,6 +1,5 @@
 #pragma once
 #include <string>
-#include <vector>
 
 class Type {
 public:
@@ -19,34 +18,16 @@ public:
 class Pokemon {
 public:
   std::string name;
+  // NOTE: for multiple types in future
+  //  Type arr[2];
   Type type;
-  std::vector<Move> moves;
+  // NOTE: for multiple moves in future
+  //  std::vector<Move> moves;
+  Move move;
 
-  Pokemon(std::string name, std::string typeName, std::string moveOne);
+  Pokemon(std::string name, std::string typeName, std::string moveOne,
+          int moveDamage, std::string moveType);
   std::string returnType();
-  std::string action(int choice);
+  std::string action();
   virtual ~Pokemon() = default;
 };
-
-/*
-class Charmander : public Pokemon {
-public:
-  Charmander();
-  void Attack() override;
-  void returnType() override;
-};
-
-class Squirtle : public Pokemon {
-public:
-  Squirtle();
-  void Attack() override;
-  void returnType() override;
-};
-
-class Bulbasaur : public Pokemon {
-public:
-  Bulbasaur();
-  void Attack() override;
-  void returnType() override;
-};
-*/
